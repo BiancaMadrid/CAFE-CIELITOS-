@@ -99,3 +99,81 @@ public class Main {
             }
         }
     }
+    // Method to add a sandwich to the order
+    private static void addSandwich(Order order) {
+        System.out.println("\nSelect Sandwich Size:");
+        for (SandwichSize size : SandwichSize.values()) {
+            System.out.println(size.ordinal() + 1 + ". " + size);
+        }
+        int sizeChoice = reader.nextInt();
+        reader.nextLine();
+
+        SandwichSize sandwichSize = SandwichSize.values()[sizeChoice - 1];
+
+        System.out.println("Select Bread Type:");
+        for (BreadType bread : BreadType.values()) {
+            System.out.println(bread.ordinal() + 1 + ". " + bread);
+        }
+        int breadChoice = reader.nextInt();
+        reader.nextLine();
+
+        BreadType breadType = BreadType.values()[breadChoice - 1];
+
+        System.out.println("Do you want it toasted? (yes/no): ");
+        boolean toasted = reader.nextLine().equalsIgnoreCase("yes");
+
+        Sandwich sandwich = new Sandwich(sandwichSize, breadType, toasted);
+
+        // Add meats to the sandwich
+        System.out.println("Select Meats (type the number, separated by commas):");
+        for (MeatChoice meat : MeatChoice.values()) {
+            System.out.println(meat.ordinal() + 1 + ". " + meat);
+        }
+        String meatChoices = reader.nextLine();
+        String[] meatIndices = meatChoices.split(",");
+        for (String index : meatIndices) {
+            MeatChoice meat = MeatChoice.values()[Integer.parseInt(index.trim()) - 1];
+            sandwich.addMeat(meat);
+        }
+
+        // Add cheeses to the sandwich
+        System.out.println("Select Cheeses (type the number, separated by commas):");
+        for (CheeseChoices cheese : CheeseChoices.values()) {
+            System.out.println(cheese.ordinal() + 1 + ". " + cheese);
+        }
+        String cheeseChoices = reader.nextLine();
+        String[] cheeseIndices = cheeseChoices.split(",");
+        for (String index : cheeseIndices) {
+            CheeseChoices cheese = CheeseChoices.values()[Integer.parseInt(index.trim()) - 1];
+            sandwich.addCheese(cheese);
+        }
+
+
+        // Add extra meat and cheese
+        System.out.println("How many extra servings of meat?");
+        int extraMeat = reader.nextInt();
+        reader.nextLine();
+        sandwich.setExtraMeat(extraMeat);
+
+        System.out.println("How many extra servings of cheese?");
+        int extraCheese = reader.nextInt();
+        reader.nextLine();
+        sandwich.setExtraCheese(extraCheese);
+
+        // Add veggies to the sandwich
+        System.out.println("Select Veggies (type the number, separated by commas):");
+        for (VeggieChoice veggie : VeggieChoice.values()) {
+            System.out.println(veggie.ordinal() + 1 + ". " + veggie);
+        }
+        String veggieChoices = reader.nextLine();
+        String[] veggieIndices = veggieChoices.split(",");
+        for (String index : veggieIndices) {
+            VeggieChoice veggie = VeggieChoice.values()[Integer.parseInt(index.trim()) - 1];
+            sandwich.addVeggie(veggie);
+        }
+
+        // Add the sandwich to the order
+        order.addItem(sandwich);
+        System.out.println("Sandwich added to order.");
+    }
+
