@@ -1,0 +1,16 @@
+Order Receipt
+================
+Order Details: 
+Size: EIGHT_INCH
+Bread: WHEAT
+Toasted: true
+Meats: [Steak, ROAST_BEEF]
+Cheeses: [PROVOLONE, CHEDDAR]
+Veggies: [LETTUCE, TOMATOES, JALEPENOS, PICKLES, CUCUMBERS, TOMATOES, ONIONS]
+Sauce: [MAYO, RANCH, VINAIGRETTE]
+Extra Cheese: 1
+Extra Meat: 1
+
+Total: $10.5
+Thank you for your order!
+ Have a great day!

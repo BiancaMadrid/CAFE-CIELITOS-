@@ -73,6 +73,7 @@ public class Sandwich implements Food {
               .append("Meats: ").append(meat).append("\n")
               .append("Cheeses: ").append(cheese).append("\n")
               .append("Veggies: ").append(veggies).append("\n")
+              .append("Sauce: ").append(sauce).append("\n")
               .append("Extra Cheese: ").append(extraCheese).append("\n")
               .append("Extra Meat: ").append(extraMeat).append("\n");
       return getDescription.toString();
