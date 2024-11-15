@@ -38,6 +38,10 @@ public class Sandwich implements Food {
    public void addVeggie(VeggieChoice veggie) {
       this.veggies.add(veggie);
    }
+   public void addSauce(SauceChoices sauce){
+      this.sauce.add(sauce);
+
+   }
    public void setExtraMeat(int extraMeat){
       this.extraMeat = extraMeat;
    }

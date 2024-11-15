@@ -6,7 +6,6 @@ public class Main {
     private static Scanner reader = new Scanner(System.in);
 
     public static void main(String[] args) {
-    //Making HomeScreen w/ order option and exit option
         // Making HomeScreen with order option and exit option
         boolean exit = false;
         while (!exit) {
@@ -170,6 +169,17 @@ public class Main {
         for (String index : veggieIndices) {
             VeggieChoice veggie = VeggieChoice.values()[Integer.parseInt(index.trim()) - 1];
             sandwich.addVeggie(veggie);
+        }
+
+        // Add sauces to the sandwich
+        System.out.println("Select Sauces (type the number, separated by commas):");
+        for (SauceChoices sauce : SauceChoices.values()) {
+            System.out.println(sauce.ordinal() + 1 + ". " + sauce); }
+        String sauceChoices = reader.nextLine();
+        String[] sauceIndices = sauceChoices.split(",");
+        for (String index : sauceIndices) {
+            SauceChoices sauce = SauceChoices.values()[Integer.parseInt(index.trim()) - 1];
+            sandwich.addSauce(sauce);
         }
 
         // Add the sandwich to the order
