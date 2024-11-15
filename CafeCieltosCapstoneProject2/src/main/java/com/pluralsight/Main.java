@@ -198,8 +198,11 @@ public class Main {
         reader.nextLine();
 
         DrinkChoice drinkType = DrinkChoice.values()[drinkChoice - 1];
+        System.out.println("Select Size (small/medium/large): ");
+        String size = reader.nextLine().toLowerCase();
 
         Drinks drink = new Drinks(drinkType);
+        Drinks drink = new Drinks(drinkType, size);
         order.addItem(drink);
         System.out.println("Drink added to order.");
     }
@@ -259,9 +262,15 @@ public class Main {
         }
 
         System.out.println("\nDrinks and Prices (Small, Medium, Large):");
+        System.out.println("\nDrinks Prices:");
+        System.out.println("Small: $2.00");
+        System.out.println("Medium: $2.50");
+        System.out.println("Large: $3.00");
+        System.out.println("\nDrink Choices:");
         for (DrinkChoice drink : DrinkChoice.values()) {
             System.out.printf("%s: Small $%.2f, Medium $%.2f, Large $%.2f\n",
                     drink.name(), drink.getSmallCost(), drink.getMediumCost(), drink.getLargeCost());
+            System.out.println(drink.name());
         }
 
         System.out.println("\nChips and Price:");
