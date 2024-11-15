@@ -212,3 +212,17 @@ public class Main {
 
 
     // Method to add a dessert to the order
+    private static void addDessert(Order order) {
+        System.out.println("\nSelect Dessert:");
+        for (DesertChoice dessert : DesertChoice.values()) {
+            System.out.println(dessert.ordinal() + 1 + ". " + dessert);
+        }
+        int dessertChoice = reader.nextInt();
+        reader.nextLine();
+
+        DesertChoice dessertType = DesertChoice.values()[dessertChoice - 1];
+        order.addItem(dessertType);
+        System.out.println("Dessert added to order.");
+    }
+
+
