@@ -226,3 +226,11 @@ public class Main {
     }
 
 
+    // Method checkout and complete the order
+    private static void checkout(Order order) {
+        System.out.println("\n" + order.getOrderDetails());
+        Receipt.saveReceipt(order);
+        System.out.println("Order completed and receipt saved.");
+    }
+
+
