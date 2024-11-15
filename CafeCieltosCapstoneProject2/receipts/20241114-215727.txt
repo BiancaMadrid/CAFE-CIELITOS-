@@ -1,0 +1,17 @@
+Order Receipt
+================
+Order Details: 
+Size: EIGHT_INCH
+Bread: WHEAT
+Toasted: true
+Meats: [Steak, BACON]
+Cheeses: [AMERICAN]
+Veggies: [LETTUCE, PEPPERS, CUCUMBERS, MUSHROOMS]
+Extra Cheese: 0
+Extra Meat: 1
+
+Drink: MATCHA_ICED_LATTE
+CROISSANT: $4.5
+Total: $20.0Total Cost: $20.0
+Thank you for your order!
+ Have a great day!
