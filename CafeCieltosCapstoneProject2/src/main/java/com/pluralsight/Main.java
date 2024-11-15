@@ -177,3 +177,21 @@ public class Main {
         System.out.println("Sandwich added to order.");
     }
 
+
+    // Method to add a drink to the order
+    private static void addDrink(Order order) {
+        System.out.println("\nSelect Drink:");
+        for (DrinkChoice drink : DrinkChoice.values()) {
+            System.out.println(drink.ordinal() + 1 + ". " + drink);
+        }
+        int drinkChoice = reader.nextInt();
+        reader.nextLine();
+
+        DrinkChoice drinkType = DrinkChoice.values()[drinkChoice - 1];
+
+        Drinks drink = new Drinks(drinkType);
+        order.addItem(drink);
+        System.out.println("Drink added to order.");
+    }
+
+
