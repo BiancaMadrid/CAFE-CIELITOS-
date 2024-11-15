@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 public enum sandwichSize {
+public enum SandwichSize {
         FOUR_INCH(5.50, 1.00, 0.75, 0.50,0.30),
         EIGHT_INCH(7.00, 2.00, 1.50,1.00,0.60),
         TWELVE_INCH(8.50, 3.00, 2.25,1.50,0.90);
@@ -13,6 +14,7 @@ public enum sandwichSize {
 
     //Constructor
     sandwichSize(double baseCost, double meatCost, double cheeseCost, double extraMeatCost,double extraCheeseCost) {
+    SandwichSize(double baseCost, double meatCost, double cheeseCost, double extraMeatCost, double extraCheeseCost) {
         this.baseCost = baseCost;
         this.meatCost = meatCost;
         this.cheeseCost = cheeseCost;

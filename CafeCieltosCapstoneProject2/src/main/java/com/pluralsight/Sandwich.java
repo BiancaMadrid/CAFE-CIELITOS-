@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Sandwich implements Food {
    private sandwichSize sandwichSize;
+   private SandwichSize sandwichSize;
    private List<MeatChoice> meat;
    private BreadType bread;
    private List<CheeseChoices> cheese;
@@ -17,6 +18,7 @@ public class Sandwich implements Food {
 
    //Constructor for Sandwich
    public Sandwich(sandwichSize sandwichSize, BreadType bread, boolean toasted) {
+   public Sandwich(SandwichSize sandwichSize, BreadType bread, boolean toasted) {
       this.sandwichSize = sandwichSize;
       this.bread = bread;
       this.toasted = toasted;
@@ -26,6 +28,23 @@ public class Sandwich implements Food {
       this.sauce = new ArrayList<>();
 
    }
+   //Adding topping to sandwich
+   public void addMeat(MeatChoice meat) {
+      this.meat.add(meat);
+   }
+   public void addCheese(CheeseChoices cheese) {
+      this.cheese.add(cheese);
+   }
+   public void addVeggie(VeggieChoice veggie) {
+      this.veggies.add(veggie);
+   }
+   public void setExtraMeat(int extraMeat){
+      this.extraMeat = extraMeat;
+   }
+   public void setExtraCheese(int extraCheese) {
+      this.extraCheese = extraCheese;
+
+}
 
 
    //Calculating total cost of sandwich (implementing Food.getCost())
