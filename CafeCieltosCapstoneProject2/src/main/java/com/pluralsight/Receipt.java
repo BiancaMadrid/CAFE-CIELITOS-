@@ -33,7 +33,6 @@ public class Receipt {
                 writer.write("Order Receipt\n");
                 writer.write("================\n");
                 writer.write(receiptContent);
-                writer.write("Total Cost: $" + order.calculateTotal());
                 writer.write("\nThank you for your order!\n Have a great day!");
             }
         } catch (IOException e) {
