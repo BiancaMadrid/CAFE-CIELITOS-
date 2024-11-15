@@ -195,3 +195,20 @@ public class Main {
     }
 
 
+    // Method to add chips to the order
+    private static void addChips(Order order) {
+        System.out.println("\nSelect Chips:");
+        for (ChipsChoice chips : ChipsChoice.values()) {
+            System.out.println(chips.ordinal() + 1 + ". " + chips);
+        }
+        int chipsChoice = reader.nextInt();
+        reader.nextLine();
+
+        ChipsChoice chipsType = ChipsChoice.values()[chipsChoice - 1];
+
+        order.addItem(chipsType);
+        System.out.println("Chips added to order.");
+    }
+
+
+    // Method to add a dessert to the order
