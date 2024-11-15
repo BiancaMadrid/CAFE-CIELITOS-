@@ -234,3 +234,44 @@ public class Main {
     }
 
 
+    // Display the full menu for the customer
+    private static void displayMenu() {
+        System.out.println("\nMenu:");
+
+        System.out.println("\nSandwich Sizes and Prices:");
+        for (SandwichSize size : SandwichSize.values()) {
+            System.out.printf("%s: $%.2f\n", size.name(), size.getBaseCost());
+        }
+        
+        System.out.println("\nBread Types:");
+        for (BreadType bread : BreadType.values()) {
+            System.out.println(bread.name());
+        }
+
+        System.out.println("\nDrinks and Prices (Small, Medium, Large):");
+        for (DrinkChoice drink : DrinkChoice.values()) {
+            System.out.printf("%s: Small $%.2f, Medium $%.2f, Large $%.2f\n",
+                    drink.name(), drink.getSmallCost(), drink.getMediumCost(), drink.getLargeCost());
+        }
+
+        System.out.println("\nChips and Price:");
+        for (ChipsChoice chips : ChipsChoice.values()) {
+            System.out.printf("%s: $%.2f\n", chips.name(), chips.getCost());
+        }
+
+        System.out.println("\nDesserts and Prices:");
+        for (DesertChoice dessert : DesertChoice.values()) {
+            System.out.printf("%s: $%.2f\n", dessert.name(), dessert.getCost());
+        }
+
+        System.out.println("\nMeat Choices:");
+        for (MeatChoice meat : MeatChoice.values()) {
+            System.out.println(meat.name());
+        }
+
+        System.out.println("\nCheese Choices:");
+        for (CheeseChoices cheese : CheeseChoices.values()) {
+            System.out.println(cheese.name());
+        }
+    }
+}
