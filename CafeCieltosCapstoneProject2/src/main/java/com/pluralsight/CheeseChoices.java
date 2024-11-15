@@ -1,6 +1,8 @@
 package com.pluralsight;
 
 public enum CheeseChoices {
-        AMERICAN, PROVOLONE, CHEDDAR, SWISS
-    }
+        AMERICAN, PROVOLONE, CHEDDAR, SWISS;
+
+
+}
 
