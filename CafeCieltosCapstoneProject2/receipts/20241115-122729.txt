@@ -1,0 +1,15 @@
+Order Receipt
+================
+Order Details: 
+Size: EIGHT_INCH
+Bread: RYE
+Toasted: true
+Meats: [Steak, SALAMI]
+Cheeses: [AMERICAN, CHEDDAR]
+Veggies: [LETTUCE, ONIONS, TOMATOES, CUCUMBERS, MUSHROOMS]
+Extra Cheese: 2
+Extra Meat: 2
+
+Total: $14.0
+Thank you for your order!
+ Have a great day!
